@@ -14,6 +14,7 @@ export const FooterMain = styled.div`
         align-items: center;
         border-radius: 25px;
         padding: 0 12px;
+        margin: 10px;
         input{
             font-weight: 400;
             font-size: 14px;
@@ -27,7 +28,6 @@ export const FooterMain = styled.div`
     }
 
     div:last-child{
-        width: 10%;
         a{
             display: flex;
             justify-content: end;
