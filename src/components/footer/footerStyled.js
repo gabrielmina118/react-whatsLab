@@ -7,7 +7,6 @@ export const FooterMain = styled.div`
     justify-content: space-between;
 
     div:first-child{
-        /* width: 80%; */
         background-color: white;
         width: 490px;
         display: flex;
