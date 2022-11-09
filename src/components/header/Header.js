@@ -3,13 +3,24 @@ import camera from "../../assets/video-cam.svg"
 import hamburguer from "../../assets/hamburger.svg"
 import { MainHeader, MainPerson , Icons} from "./headerStyled"
 
-function Header() {
+function Header(props) {
+
+  function onChangePerson(event){
+    props.setPerson(event.target.value)
+  }
+
   return (
     <MainHeader>
       <MainPerson>
         <img src="https://picsum.photos/200/300" alt="imagem perfil" />
         <div>
-          <p>Nikolas</p>
+          <select value={props.person} onChange={onChangePerson}>
+            <option value="me">Me</option>
+            <option value="cesar">César</option>
+            <option value="everson">Everson</option>
+            <option selected value="lucas">Lucas</option>
+            <option value="arthur">Arthur</option>
+          </select>
           <p>Online</p>
         </div>
       </MainPerson>

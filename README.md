@@ -3,9 +3,9 @@
 
 ## dia 3 
 ### -> Criar o array de mensagens (CHECK)
-### -> elevar o estado das mensagens
-### -> Enviar a mensagem e refletir na tela
-### -> identificar o usuario (id,autor,texto,datacriacao)
+### -> elevar o estado das mensagens (CHECK)
+### -> Enviar a mensagem e refletir na tela (CHECK)
+### -> identificar o usuario da mensagem ->  (id,autor,texto,datacriacao)
 ### -> identificar o usuario pelo select
 
 

@@ -7,19 +7,25 @@ import Header from "./components/header/Header";
 // Componentes são selfClose , as tags de html , dependendo , não são.
 function App() {
 
+  // array de mensagens
   const [messages, setMessages] = useState([])
+  const [person,setPerson] = useState("")
 
+  
   return (
     <Main>
-      <Header/>
+      <Header
+        person={person}
+        setPerson={setPerson}
+      />
       <ChatBox 
         messages={messages}
       />
       <Footer 
+        person={person}
         messages={messages} 
         setMessages={setMessages}
       />
-
     </Main>
   );
 }

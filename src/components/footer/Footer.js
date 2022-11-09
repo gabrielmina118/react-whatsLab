@@ -5,7 +5,8 @@ import smile from "../../assets/smiley.svg"
 import paperclip from "../../assets/paperclip.svg"
 
 function Footer(props) {
-    // aqui entra o react
+   
+    // o valor da mensagem do input
     const [message, setMessage] = useState("");
     
     function onChangeInput(event) {
@@ -19,8 +20,14 @@ function Footer(props) {
             // crio a copia do meu array
             const novaMensage = [...props.messages]
 
+            //Criamos esse objeto , para saber quem é a pessoa que esta mandando a mensagem e qual é a mensagem
+            const novaPessoaMensagem = {
+                person:props.person,
+                message:message
+            }
+
             // altero a copia com a nova informação
-            novaMensage.push(message)
+            novaMensage.push(novaPessoaMensagem)
 
             // altero o meu estado de array , com o valor da cópia.
             props.setMessages(novaMensage)
@@ -58,9 +65,5 @@ function Footer(props) {
 
 export default Footer
 
-
-//estrutura que armazena mais de uma informacao
-
-// const arrayDeMensagens = ["salve galera","outra mensagem","outra mensagem"]
 
 
