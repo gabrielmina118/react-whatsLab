@@ -4,25 +4,29 @@ import mic from "../../assets/microphone.svg"
 import smile from "../../assets/smiley.svg"
 import paperclip from "../../assets/paperclip.svg"
 
-function Footer(){
+function Footer() {
     // aqui entra o react
-    const [message,setMessage] = useState("")
+    const [message, setMessage] = useState("")
+    const [messages, setMessages] = useState([])
 
-    function onChangeInput(event){
+    function onChangeInput(event) {
         setMessage(event.target.value)
     }
 
-    function oneKeyDownInput(event){
-        if(event.key === "Enter"){
+
+
+    function oneKeyDownInput(event) {
+        if (event.key === "Enter") {
             setMessage("")
         }
     }
 
-    return(
+
+    return (
         <FooterMain>
             <div>
                 <a href="#">
-                    <img src={smile} alt="smile icon"/>
+                    <img src={smile} alt="smile icon" />
                 </a>
 
                 <input
@@ -33,12 +37,12 @@ function Footer(){
                 />
 
                 <a href="#">
-                    <img src={paperclip} alt="paperclip icon"/>
+                    <img src={paperclip} alt="paperclip icon" />
                 </a>
             </div>
             <div>
-                <a href="#"> 
-                    <img src={mic} alt="microfone"/>
+                <a href="#">
+                    <img src={mic} alt="microfone" />
                 </a>
             </div>
         </FooterMain>
