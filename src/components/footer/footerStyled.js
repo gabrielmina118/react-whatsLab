@@ -7,12 +7,23 @@ export const FooterMain = styled.div`
     justify-content: space-between;
 
     div:first-child{
-        width: 80%;
+        /* width: 80%; */
+        background-color: white;
+        width: 490px;
         display: flex;
+        justify-content: space-between;
         align-items: center;
+        border-radius: 25px;
+        padding: 0 12px;
         input{
-            height: 50px;
-            width:80%;
+            font-weight: 400;
+            font-size: 14px;
+            color: #78787C;
+            margin-right: auto;
+            width: 390px;
+            outline: none;
+            border: none;
+            padding: 16px;
         }
     }
 
@@ -25,7 +36,7 @@ export const FooterMain = styled.div`
             img{
                 width: 50px;
                 height: 50px;
-                background-color: green;
+                background-color: #61C554;
                 border-radius: 50px;
             }
         }
