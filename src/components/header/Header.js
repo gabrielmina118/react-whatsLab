@@ -6,7 +6,6 @@ import { MainHeader, MainPerson , Icons} from "./headerStyled"
 function Header() {
   return (
     <MainHeader>
-
       <MainPerson>
         <img src="https://picsum.photos/200/300" alt="imagem perfil" />
         <div>

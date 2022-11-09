@@ -1,9 +1,18 @@
 import { MainChatBox } from "./chatBoxStyled"
 
-function ChatBox(){
-    return(
+function ChatBox(props) {
+
+    const MostraMensagem = props.messages.map((mensagem)=>{
+        return(
+            <div>
+                <p>{mensagem}</p>
+            </div>
+        )
+    })
+
+    return (
         <MainChatBox>
-            <p>Chat</p>
+            {MostraMensagem}
         </MainChatBox>
     )
 }

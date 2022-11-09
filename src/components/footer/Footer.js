@@ -4,23 +4,30 @@ import mic from "../../assets/microphone.svg"
 import smile from "../../assets/smiley.svg"
 import paperclip from "../../assets/paperclip.svg"
 
-function Footer() {
+function Footer(props) {
     // aqui entra o react
-    const [message, setMessage] = useState("")
-    const [messages, setMessages] = useState([])
-
+    const [message, setMessage] = useState("");
+    
     function onChangeInput(event) {
         setMessage(event.target.value)
     }
 
-
-
     function oneKeyDownInput(event) {
         if (event.key === "Enter") {
+            // Quando trabalhar com array , eu faço a copia do array,insiro a informacao e altero o estado do array
+
+            // crio a copia do meu array
+            const novaMensage = [...props.messages]
+
+            // altero a copia com a nova informação
+            novaMensage.push(message)
+
+            // altero o meu estado de array , com o valor da cópia.
+            props.setMessages(novaMensage)
+
             setMessage("")
         }
     }
-
 
     return (
         <FooterMain>
@@ -50,3 +57,10 @@ function Footer() {
 }
 
 export default Footer
+
+
+//estrutura que armazena mais de uma informacao
+
+// const arrayDeMensagens = ["salve galera","outra mensagem","outra mensagem"]
+
+
