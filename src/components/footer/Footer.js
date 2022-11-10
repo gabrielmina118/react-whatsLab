@@ -21,13 +21,12 @@ function Footer(props) {
             const novaMensage = [...props.messages]
 
             //Criamos esse objeto , para saber quem é a pessoa que esta mandando a mensagem e qual é a mensagem
-            const novaPessoaMensagem = {
-                person:props.person,
-                message:message
+            const objetoMensagem = {
+                nomeDoAutor:props.person,
+                mensagemDoAutor:message
             }
-
             // altero a copia com a nova informação
-            novaMensage.push(novaPessoaMensagem)
+            novaMensage.push(objetoMensagem)
 
             // altero o meu estado de array , com o valor da cópia.
             props.setMessages(novaMensage)

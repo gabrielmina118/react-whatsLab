@@ -20,7 +20,7 @@ export const MainPerson = styled.div`
     }
 
     div{
-        width: 100px;
+        width: 200px;
         height: 100px;
         display: flex;
         flex-direction: column;

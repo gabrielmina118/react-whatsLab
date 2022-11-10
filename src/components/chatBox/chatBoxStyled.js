@@ -9,9 +9,9 @@ export const MainChatBox = styled.div`
 `
 
 export const Message = styled.div`
-    background-color:${props => props.person === "me" ? "#61C554" : "gray"};
-    color:${props => props.person === "me" ? "white" : "black"};;
-    margin-left: ${props => props.person === "me" ? "auto" : 0};
+    background-color:${props => props.autor === "me" ? "#61C554":"lightgray"};
+    color:${props => props.autor === "me" ? "white":"black"};
+    margin-left:${props => props.autor === "me" ? "auto":0};
     min-width: 80px;
     max-width: 300px;
     padding: 8px;
@@ -20,7 +20,8 @@ export const Message = styled.div`
     
         h1 {
             font-weight: 500;
-            font-size: 16px;
+            font-size: 20px;
+            text-transform:uppercase;
             padding-bottom: 4px;
         }
         

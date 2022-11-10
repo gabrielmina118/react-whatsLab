@@ -9,11 +9,11 @@ function ChatBox(props) {
         return(
             <Message 
                 key={index}
-                person={message.person}    
+                autor={message.nomeDoAutor}
             >
-                <h1>{message.person}</h1>
+                <h1>{message.nomeDoAutor}</h1>
                 <div>
-                    <p>{message.message}</p>
+                    <p>{message.mensagemDoAutor}</p>
                     <div>
                         <img src={tickGreen} alt="ticket"/>
                     </div>

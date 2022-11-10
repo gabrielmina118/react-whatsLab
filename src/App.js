@@ -19,6 +19,7 @@ function App() {
         setPerson={setPerson}
       />
       <ChatBox 
+        person={person}
         messages={messages}
       />
       <Footer 
