@@ -15,7 +15,6 @@ function Header(props) {
         <img src="https://picsum.photos/200/300" alt="imagem perfil" />
         <div>
           <select value={props.person} onChange={onChangePerson}>
-            <option value="">Selecione uma pessoa</option>
             <option value="me">Me</option>
             <option value="cesar">César</option>
             <option value="everson">Everson</option>

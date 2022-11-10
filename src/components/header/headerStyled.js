@@ -6,6 +6,7 @@ export const MainHeader = styled.div`
     align-items: center;
     background-color: white;
 `
+// css em cascata
 export const MainPerson = styled.div`
     display: flex;
     align-items: center;

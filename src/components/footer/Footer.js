@@ -5,13 +5,15 @@ import smile from "../../assets/smiley.svg"
 import paperclip from "../../assets/paperclip.svg"
 
 function Footer(props) {
-   
+
     // o valor da mensagem do input
     const [message, setMessage] = useState("");
-    
-    function onChangeInput(event) {
-        setMessage(event.target.value)
-    }
+
+    // funcao nomeada = function nomeDaFuncao()
+    // funcao nao nomeada = ()=>
+    // function onChangeInput(event) {
+    //     setMessage(event.target.value)
+    // }
 
     function oneKeyDownInput(event) {
         if (event.key === "Enter") {
@@ -22,13 +24,19 @@ function Footer(props) {
 
             //Criamos esse objeto , para saber quem é a pessoa que esta mandando a mensagem e qual é a mensagem
             const objetoMensagem = {
-                nomeDoAutor:props.person,
-                mensagemDoAutor:message
+                idDoAutor: Date.now(),
+                nomeDoAutor: props.person,
+                mensagemDoAutor: message,
+                horario: new Date().toLocaleString("pt-BR", {
+                    hour: "numeric",
+                    minute: "numeric",
+                    hour12: true
+                })
             }
             // altero a copia com a nova informação
             novaMensage.push(objetoMensagem)
 
-            // altero o meu estado de array , com o valor da cópia.
+            // altero o estado do array original , com o valor do array de cópia.
             props.setMessages(novaMensage)
 
             setMessage("")
@@ -45,7 +53,7 @@ function Footer(props) {
                 <input
                     type={"text"}
                     value={message}
-                    onChange={onChangeInput}
+                    onChange={(event)=>setMessage(event.target.value)}
                     onKeyDown={oneKeyDownInput}
                 />
 
